@@ -19,4 +19,14 @@ public class TicketSubmissionController {
         ticketService.createTicket(ticketDto);
         return new ResponseEntity<>("Ticket Submitted Successfully", HttpStatus.CREATED);
     }
+
+    @PutMapping("/{id}/resolve")
+    public ResponseEntity<String> resolveTicket(@PathVariable Long id) {
+        try {
+            ticketService.resolveTicket(id);
+            return new ResponseEntity<>("Ticket Resolved and User Notified Successfully", HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
 }
