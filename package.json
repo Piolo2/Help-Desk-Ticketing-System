@@ -1,0 +1,13 @@
+{
+  "name": "help-desk-ticketing-system-tests",
+  "version": "1.0.0",
+  "description": "Cypress tests for Help Desk Ticketing System",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^13.13.0"
+  }
+}

@@ -62,4 +62,8 @@ public class TicketSubmissionService {
             throw new RuntimeException("Ticket not found with id: " + id);
         }
     }
+
+    public java.util.List<TicketSubmission> getAllTickets() {
+        return ticketRepository.findAll();
+    }
 }
